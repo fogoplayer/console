@@ -6,25 +6,30 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
    </head>
    <body>
-      <div id="title">
-        <center><h1>Console</h1></center>
-      </div>
       <center><div contentEditable="true" id="input"></div>
       <div id="output"></div></center>
+      <button onclick="run()"></button>
    </body>
    <style>
       #input {
           float:left;
-          width:49%;
-          height:75%;
+          width:50%;
+          height:90%;
           overflow-y:scroll;
       }
       
       #output {
           float:left;
-          width:49%;
-          height:75%;
+          width:50%;
+          height:100%;
           overflow-y:scroll;
       }
    </style>
+  <script>
+    var run = function(){
+      var input=document.getElementById("input").innerHTML;
+      var output=document.getElementById("input").innerHTML;
+      eval(input);
+    }
+  </script>
 </html>
