@@ -4,11 +4,12 @@
     <title>Console</title>
       <meta name="mobile-web-app-capable" content="yes">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
    </head>
    <body>
-      <center><div contentEditable="true" id="input"></div>
-      <div id="output"></div></center>
-      <button onclick="run()">RUN</button>
+     <div contentEditable="true" id="input"></div>
+     <div id="output"></div>
+     <button onclick="run()">RUN</button>
    </body>
    <style>
       #input {
@@ -33,6 +34,10 @@
      
       div {
         border:0.5px solid black;
+      }
+     
+      *{
+        font-family: 'Roboto Mono', monospace;
       }
    </style>
   <script>
