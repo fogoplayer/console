@@ -43,7 +43,7 @@
       for(i=0;i<input.length;i++){
         var subject = input.substring(i,i+"console.log(".length)
         if (subject === "console.log("){
-          input=input.substring(0,i) + "output.innerHTML="+input.substring(i+"console.log(".length));
+          input=input.substring(0,i) + "output.innerHTML="+input.substring(i+"console.log(".length);
         }
       }
       eval(input);
