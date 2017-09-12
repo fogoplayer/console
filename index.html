@@ -45,7 +45,7 @@
         if (subject === "console.log("){
           input=input.substring(0,i) + "output.innerHTML="+input.substring(i+"console.log(".length);
         }
-        subject = input.substring(i,i+2
+        subject = input.substring(i,i+2);
         if (subject === ");"){
           input=input.substring(0,i) + ";"+input.substring(i+2);
         }
