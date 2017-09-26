@@ -38,12 +38,23 @@
    </style>
   <script>
     var run = function(){
-      var input=document.getElementById("input").innerHTML;
+      var input=document.getElementById("input").innerText;
       var output=document.getElementById("output");
       for(i=0;i<input.length;i++){
         var subject = input.substring(i,i+"console.log(".length)
         if (subject === "console.log("){
-          input=input.substring(0,i) + "output.innerHTML="+input.substring(i+"console.log(".length);
+          input=input.substring(0,i) + "output.innerText="+input.substring(i+"console.log(".length);
+          for(j=i;j<input.length;j++{
+              subject = input.substring(i,i++);
+              var count = 0;
+              if(subject === "("){
+                count = count++;
+              }
+              if (subject === ")" && count > 0){
+                count = count--;
+              else if (subject === ")"){
+                 input=input.substring(0,i) + input.substring(i++);
+          }
         }
         subject = input.substring(i,i+2);
         if (subject === ");"){
